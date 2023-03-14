@@ -1,0 +1,91 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif !important;
+  color: #ffffff;
+  background-color: #00171F;
+}
+
+a {
+  color: #00A7E1;
+  text-decoration: none;
+}
+
+img, svg, image {
+  max-width: 100%;
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter-div{
+  width:40rem;
+  border: var(--grey) 1px solid;
+  padding: 1rem;
+  background-color: var(--light-blue);
+  color:var(--white);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.counter-div > *{
+margin-bottom: 2rem;
+}
+
+.count{
+  font-size: 4rem;
+}
+
+.buttons button{
+  padding: 1rem;
+  margin:  0 1rem;
+  font-size: 1.5rem;
+  border:none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif !important;
+  cursor: pointer;
+}
+
+button.subtract{
+  background-color: orangered;
+}
+button.reset{
+  background-color: var(-white);
+  color: var(--black);
+}
+button.add{
+  background-color: greenyellow;
+}
