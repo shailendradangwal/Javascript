@@ -1,0 +1,300 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+  --white: #ffffff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--white);
+  background-color: var(--white);
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+hr{
+  color: var(--light-blue);
+}
+
+img, svg, image {
+  max-width: 100%;
+}
+
+ input{
+  max-width:90%;
+  font-size: 2rem !important;
+}
+
+::placeholder{
+  font-size: 2rem !important;
+}
+
+body {
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+header {
+  color: var(--white);
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+header h1 span {
+  font-weight: 700;
+}
+
+
+section.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form button {
+outline: none;
+border: 1px solid var(--white);
+padding: 1rem 2rem;
+border-radius: 3px;
+background-color: transparent;
+color: var(--white);
+font-size: 1.4rem;
+font-weight: 700;
+margin: 0 0.5rem;
+}
+
+form button:hover {
+  background-color: var(--color-sec);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(80, 175, 73, 0.5);
+  z-index: +1;
+}
+
+.close {
+  position: absolute;
+  top:5px;
+  right:10px;
+  color:var(--color-primary);
+  font-size: 2rem;
+  cursor: pointer;;
+}
+
+
+/* Modal from Top Starts*/
+
+.modal-contenttop{
+  width:80%;
+  max-width: 60rem;
+  background-color: var(--grey);
+  margin:15% auto;
+  padding: 2rem;
+  border: 1px solid var(--color-sec);
+  text-align: center;
+  animation: slidetop ease .8s;
+  color: var(--blue);
+  position: relative;
+}
+
+
+@keyframes slidetop {
+  0% {
+    transform: translateY(-50rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.slidetop-up {
+  animation: slidetop-up ease .8s;
+}
+
+@keyframes slidetop-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50rem);
+  }
+}
+/* Modal from Top Ends*/
+
+
+
+
+/* Modal from Right Starts*/
+
+.modal-contentright{
+  width:80%;
+  max-width: 60rem;
+  background-color: var(--grey);
+  margin:15% auto;
+  padding: 2rem;
+  border: 1px solid var(--color-sec);
+  text-align: center;
+  animation: slideright ease .8s;
+  color: var(--blue);
+  position: relative;
+}
+
+
+@keyframes slideright {
+  0% {
+    transform: translateX(100%);  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.slideright-left {
+  animation: slideright-left ease .8s;
+}
+
+@keyframes slideright-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Modal from Right Ends*/
+
+
+
+
+/* Modal from Bottom Starts*/
+
+.modal-contentbottom{
+  width:80%;
+  max-width: 60rem;
+  background-color: var(--grey);
+  margin:15% auto;
+  padding: 2rem;
+  border: 1px solid var(--color-sec);
+  text-align: center;
+  animation: slidebottom ease .8s;
+  color: var(--blue);
+  position: relative;
+}
+
+
+@keyframes slidebottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
+.slidebottom-up {
+  animation: slidebottom-up ease .8s;
+}
+
+@keyframes slidebottom-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+/* Modal from Bottom Ends*/
+
+
+
+
+/* Modal from Left Starts*/
+
+.modal-contentleft{
+  width:80%;
+  max-width: 60rem;
+  background-color: var(--grey);
+  margin:15% auto;
+  padding: 2rem;
+  border: 1px solid var(--color-sec);
+  text-align: center;
+  animation: slideleft ease .8s;
+  color: var(--blue);
+  position: relative;
+}
+
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.slideleft-right {
+  animation: slideleft-right ease .8s;
+}
+
+@keyframes slideleft-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Modal from Left Ends*/
