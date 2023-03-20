@@ -1,0 +1,84 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+  --white: #ffffff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--dark-grey);
+  background-color: var(--blue);
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+hr{
+  color: var(--light-blue);
+}
+
+img, svg, image {
+  max-width: 100%;
+}
+
+ input{
+  max-width:90%;
+  font-size: 1.5rem !important;
+  border: none;
+  color: var(--dark-grey);
+  line-height: 3rem;
+}
+
+::placeholder{
+  font-size: 2rem !important;
+  color: var(--dark-grey);
+}
+
+
+body{
+  background-color: var(--light-blue);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(--white);
+}
+
+.btn {
+  background-color: var(--color-sec);
+  color: var(--white);
+  line-height:2rem ;
+}
