@@ -1,0 +1,74 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+  --white: #ffffff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--dark-grey);
+  background-color: var(--grey);
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+h2 {font-weight: 800; color: var(--blue);}
+hr{
+  color: var(--light-blue);
+  border: 1px solid;
+  margin:2rem 0;
+}
+ul{
+  padding:0;
+}
+li{
+  list-style-type: none;
+}
+
+
+img, svg, image {
+  max-width: 100%;
+}
+
+ input{
+  max-width:90%;
+  font-size: 2rem !important;
+  margin: 0 auto;
+}
+
+::placeholder{
+  font-size: 2rem !important;
+}
+
+button {
+  background-color: var(--blue);  
+  color: var(--white);
+}
+
+button:hover, button:active {
+  background-color: var(--white);  
+  color: var(--blue);
+}
+

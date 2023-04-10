@@ -1,0 +1,107 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+  --white: #ffffff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--white);
+  background-color: var(--light-blue);
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+hr{
+  color: var(--light-blue);
+}
+
+img, svg, image {
+  max-width: 100%;
+}
+
+ input{
+  max-width:90%;
+  font-size: 2rem !important;
+  margin: 0 auto;
+}
+
+::placeholder{
+  font-size: 2rem !important;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.buttons button{
+  margin:  1.5rem 0;
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.buttons button:first-child{
+  margin-top:  0;
+}
+
+.btn{
+  text-align: left;
+  background-color: var(--blue);
+  color: var(--color-sec);
+  width: 100%;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  margin:  7px 0;
+  padding: 1rem;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--color-sec);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.btn:active {
+  background-color: var(--color-primary);
+}
+
+.location {
+  color: var(--grey);
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
