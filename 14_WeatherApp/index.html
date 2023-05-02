@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/global.css"></style>
+</head>
+<body>
+   <div class="main-container">
+    <div class="container top">
+        <h1>Weather App</h1>
+        <form action="" onsubmit="return false">
+            <input type ="text" class="search" placeholder="Search by City Name">
+            <button type="submit" class="btn">Submit</button>
+            <p class="error"></p>
+      </form>
+    
+      <section>
+        <div>
+            <div class="icon">
+                <img src="" alt="" class="weather-icon">
+            </div>
+            <div class="location">
+                <div class="city">New Delhi, India</div>
+                <div class="date">Sunday, April 16, 2023</div>
+            </div>
+            <hr>
+            <div class="current">
+                <div class="temp">Temp : 25 <span>&deg;C</span></div>
+                <div class="weather">Weather : Sunny</div>
+                <div class="temp-range">Temp Range : 25&deg;C / 30&deg;C</div>
+            </div>
+        </div>
+      </section>
+    </div>
+   </div>
+    <!--<script src="script/ajax.js"></script>-->
+    <!--<script src="script/fetch.js"></script>-->
+    <script src="script/main.js"></script>
+</body>
+</html>

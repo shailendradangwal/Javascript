@@ -1,0 +1,134 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+  --white: #ffffff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--dark-grey);
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://loremflickr.com/1600/1000/money);
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+hr{
+  color: var(--light-blue);
+}
+
+img, svg, image {
+  max-width: 100%;
+}
+
+ input{
+  font-size: 2rem !important;
+}
+
+::placeholder{
+  font-size: 2rem !important;
+}
+
+
+.container{
+  width: 50%;
+  background-color: rgba(154,205,50,0.75);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ form, form > * {
+  width:90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+
+ }
+
+ form div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ input, select{
+  width:20rem;
+  font-size: 1.5rem;
+  padding: 8px;
+  text-align: right;
+ }
+
+ .btn{
+  margin: 5px 0;
+  background-color: #9d0191;
+  color:var(--grey);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+ }
+
+ btn:hover{
+  background-color: var(--light-blue);
+ }
+
+ .error{
+  color:#9d0191;
+  display: none;
+ }
+
+ .result{
+  margin: 0 auto;
+  width:90%;
+  padding: 1rem;
+ }
+
+ .result > *{
+  background-color:antiquewhite;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+ }
+
+ hr{
+  padding: 0px;
+  border:1px;
+  color: none;
+  font-size: 0px;
+ }
+
+ .total{
+  color:#9d0191;
+ }
