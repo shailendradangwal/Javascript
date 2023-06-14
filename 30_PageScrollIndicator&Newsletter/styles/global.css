@@ -1,0 +1,299 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+:root {
+    --white: #ffffff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --grey: #eee;
+    --dark-grey: #222831;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+   scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif !important;
+    color: var(--dark-grey);
+    height:100vh;
+    align-items: center;
+    background-color: var(--blue);
+  }
+  
+  a {
+    color: var(--light-blue);
+    text-decoration: none;
+  }
+  
+  hr{
+    color: var(--light-blue);
+  }
+  
+  img, svg, image {
+    max-width: 100%;
+  }
+  
+   input{
+    font-size: 2rem !important;
+  }
+  
+  ::placeholder{
+    font-size: 2rem !important;
+  }
+  
+  ul{list-style-type: none;}
+  
+  
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    align-items: end;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: #9d0191 1px solid;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  
+  /* Container around content */
+  .container {
+    padding: 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 45px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 52px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 52px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -13px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  
+  
+  .sticky{
+    overflow: hidden;
+  background-color:rgb(255, 99, 71);
+  position: fixed;
+  align-items: end;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  z-index: 999;
+  border-bottom: #FF9F55 1px solid;
+  }
+  
+  .sticky a{
+    color:#fff;
+  }
+  
+  .active{
+    color:rgb(255, 99, 71);
+    background-color:#ddd;
+    color:var(--dark-grey) !important;
+  }
+  
+  
+  
+  .top{
+    bottom:3rem;
+    padding: 0 1rem 1rem 1rem;
+    position: fixed;
+    right:3rem;
+    cursor: pointer;
+    z-index: 115;
+    transform: translateY(10rem);
+    transition: all 0.3s;
+    opacity: 0;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    font-size: xx-large;
+  }
+  
+  .show-btn{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+/* Scroll Indicator CSS */
+
+.scroll-indicator{
+    width:100%;
+    height:5px;
+    left:0;
+    top:0;
+    position: fixed;
+    visibility: hidden;
+    z-index:9999;
+    background-color: var(--color-sec);
+}
+
+.progress{
+    width:0%;
+    height:5px;
+    background-color: var(--grey);
+
+}
+
+
+
+/* NEWSLETTER */  
+
+.newsletter{
+  position: fixed;
+  left:0;
+  bottom:0;
+  background-color: var(--white);
+  border: var(--color-primary) dashed 1px;
+  padding:2rem 3rem;
+  transform: translateX(-100%);
+  transition: all .5s ;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.fa-times {
+  position: absolute;
+  right:1rem;
+  top:1rem;
+  font-size:1.4rem;
+  color:red;
+  cursor: pointer;
+}
+
+
+.newsletter input, h2{
+  margin-top: 1rem;
+}
+
+
+button{
+  padding: 1rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  border:none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 700;
+  width:100%;
+  background-color: var(--light-blue);
+  color: #ffffff;
+  margin-top:1rem;
+}
